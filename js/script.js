@@ -1,9 +1,9 @@
 $(document).ready(function() {
     console.log("jQuery está listo!");
 
-    // Acción para el botón del Hero
-    $('#btn-hero').on('click', function() {
-        alert('¡Has hecho clic en el botón del Hero!');
+    // Acción para los botones del Hero
+    $('.btn-hero').on('click', function() {
+        alert('¡Has hecho clic en un botón del carrusel!');
         $(this).toggleClass('btn-light btn-warning');
     });
 

@@ -39,19 +39,16 @@ header {
   width: 100%;
   object-fit: cover;
 }
-/*#carrusel img {
-  height: 250px;
-  object-fit: cover;
-}*/
 
-@media (min-width: 768px) {
-  #carrusel img {
-    height: 400px;
-  }
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
 }
 
-@media (min-width: 1200px) {
-  #carrusel img {
-    height: 500px;
-  }
- }
+/* Adjust hero wrapper for mobile if full height is too much */
+@media (max-width: 767px) {
+    .hero-wrapper {
+        height: 60vh;
+    }
+}
