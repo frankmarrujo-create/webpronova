@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="img/pronova_favicon.ico" type="image/x-icon">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -45,16 +47,36 @@
                     <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="./img/consultoria.png" class="d-block w-100" alt="...">
+                                <img src="./img/consultoria.png" class="d-block w-100" alt="Consultoría">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Consultoría Profesional</h5>
+                                    <p>Asesoramiento experto para su empresa.</p>
+                                    <button class="btn btn-light btn-hero">Más información</button>
+                                </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="./img/software.png" class="d-block w-100" alt="...">
+                                <img src="./img/software.png" class="d-block w-100" alt="Software">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Desarrollo de Software</h5>
+                                    <p>Soluciones a medida para sus necesidades.</p>
+                                    <button class="btn btn-light btn-hero">Ver servicios</button>
+                                </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="./img/soporte.png" class="d-block w-100" alt="...">
+                                <img src="./img/soporte.png" class="d-block w-100" alt="Soporte">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Soporte Técnico</h5>
+                                    <p>Estamos para ayudarte en todo momento.</p>
+                                    <button class="btn btn-light btn-hero">Contactar</button>
+                                </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="./img/seguridad.png" class="d-block w-100" alt="...">
+                                <img src="./img/seguridad.png" class="d-block w-100" alt="Seguridad">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Ciberseguridad</h5>
+                                    <p>Protección total para sus activos digitales.</p>
+                                    <button class="btn btn-light btn-hero">Saber más</button>
+                                </div>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
