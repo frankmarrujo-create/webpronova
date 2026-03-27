@@ -42,19 +42,35 @@
 
             <!-- Hero Section -->
             <header class="bg-primary text-white text-center flex-grow-1">            
-                    <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carrusel" class="carousel slide h-100" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="./img/consultoria.png" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1>Consultoría estratégica</h1>
+                                    <p>Transformamos tu estrategia TI en resultados reales para tu negocio</p>
+                                </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="./img/software.png" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1>Desarrollo y automatizacíon</h1>
+                                    <p>Automatiza procesos y mejora tu productividad con soluciones personalizadas</p>
+                                </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="./img/soporte.png" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1>Infraestructura y soporte</h1>
+                                    <p>Mantenemos tu operación funcionando sin interrupciones</p>
+                                </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="./img/seguridad.png" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1>Ciberseguridad</h1>
+                                    <p>Defiende tu empresa contra amenazas digitales con soluciones avanzadas</p>
+                                </div>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
