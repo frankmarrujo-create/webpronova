@@ -1,4 +1,9 @@
 /* Custom Styles */
+:root{
+    --color-morado: #543884;
+    --color-verde: #219655;
+    --color-gris: #212B38;
+}
 
 body {
     
@@ -25,6 +30,22 @@ h1, h2, h3 {
 .social-icons a:hover {
     color: #0d6efd !important;
 }
+
+    /* menu  */
+    .nav-link i {
+        color: var(--color-verde);
+        vertical-align: middle;
+        font-size: 1.1rem;
+    }
+    
+    .dropdown-item i {
+        transition: transform 0.3s ease;
+    }
+    
+    .dropdown-item:hover i {
+        transform: scale(1.1);
+    }
+    /* Fin menu ------------------------  */
 
 .hero-wrapper {
   min-height: 100vh;
@@ -83,22 +104,34 @@ header {
   text-shadow: 0 2px 5px rgba(0,0,0,0.7);
 }
 
-/* barra de menu --------------------- */
-.navbar {
-  background: linear-gradient(
-      rgba(207,205,206,0.8),
-      rgba(227,220,224,0.8)
-    ),
-    url('../img/fondonav.png');
+    /* barra de menu --------------------- */
+    .navbar {
+      background: linear-gradient(
+          rgba(207,205,206,0.8),
+          rgba(227,220,224,0.8)
+        ),
+        url('../img/fondonav.png');
 
-  background-size: cover;
-  background-position: center;
-  
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
+      background-size: cover;
+      background-position: center;
+
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    } 
+    
+    .logo {
+        height: clamp(40px, 6vw, 70px); /* 🔥 clave */
+        width: auto;
+        object-fit: contain;
+    }
 
 .navbar .nav-link {
   color: #219655;
@@ -132,12 +165,12 @@ header {
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 section {
-  min-height: 100vh;
-  display: flex;
+  /*min-height: 100vh;
+  display: flex;*/
   align-items: center;
   scroll-snap-align: start;
 }
@@ -173,6 +206,7 @@ section {
   height: 100%; /* todas del mismo tamaño */
   transition: all 0.3s ease;
   gap: 20px;
+  cursor: pointer;
 }
 
 .servicio-card img {
@@ -204,11 +238,75 @@ section {
   color: #fff;
 }
 
+    .btn-pronova {
+        background: linear-gradient(45deg, #28a745, #34ce57); /* Tonos verdes Bootstrap/Modernos */
+        border: none;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    }
+
+    .servicio-card:hover .btn-pronova {
+        background: linear-gradient(45deg, #34ce57, #28a745);
+        transform: scale(1.08);
+        box-shadow: 0 6px 20px rgba(52, 206, 87, 0.5);
+        color: white;
+    }
+
+    /* Animación del icono */
+    .btn-pronova i {
+        transition: transform 0.3s ease;
+        display: inline-block;
+    }
+
+    .servicio-card:hover .btn-pronova i {
+        transform: translateX(5px);
+    }
+    
+    .btn-pronova-purple {
+        background: linear-gradient(45deg, #6f42c1, #a181dc); /* Tonos morados profundos a claros */
+        border: none;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3);
+    }
+
+    /* Efecto Hover */
+    .servicio-card:hover .btn-pronova-purple {
+        background: linear-gradient(45deg, #a181dc, #6f42c1);
+        transform: scale(1.08);
+        box-shadow: 0 6px 20px rgba(161, 129, 220, 0.5);
+        color: white;
+    }
+
+    /* Animación del icono */
+    .btn-pronova-purple i {
+        transition: transform 0.3s ease;
+        display: inline-block;
+    }
+
+    .servicio-card:hover .btn-pronova-purple i {
+        transform: rotate(15deg) scale(1.2); /* Pequeño giro para el rayo */
+    }
+    
 .nosotros{
     background: #212B38;
 }
 
 #nosotros {
+    color: #fff;
   min-height: 100vh;
   background-image: url('../img/fondonosotros.png');
   background-size: cover;
@@ -218,29 +316,527 @@ section {
   align-items: center;
 }
 
-#contacto {
-  min-height: 100vh;
-  background-image: url('../img/fondocontacto.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-}
+    /*Estilos de la section contacto  */
+    #contacto {
+      min-height: 100vh;
+      background-image: url('../img/fondocontacto.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+    }
+    
+    #contacto {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* contenido crece */
+    #contacto > .container {
+        flex: 1;
+    }
+
+    /* footer ocupa todo el ancho */
+    .footer-integrado {
+        width: 100%;
+    }
+    
+    /*----------------------------------- Fin de la section contacto  */
+    
+    /*Estilos para detalle servicio software */
+    #detalle-software {
+        background: #212B38;
+        min-height: 100vh;
+        background-image: url('../img/fondoservicios.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;  
+        color: #fff;
+    }
+
+    /* separación entre bloques */
+    #detalle-software > div {
+      margin-bottom: .5rem;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+    .hero-dev {
+      background: linear-gradient(900deg, #543884, #212B38);
+    }
+
+    .hero-dev h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .hero-dev p {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      max-width: 40rem;
+    }
+
+    /* =========================
+       TARJETAS PROBLEMA / SOLUCIÓN
+    ========================= */
+    .card-dark {
+      background: rgba(255,255,255,0.05);
+      border-radius: 0.75rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+    }
+
+    .border-morado {
+      border-left: 0.3rem solid var(--color-morado);
+    }
+
+    /* =========================
+       FEATURES (QUE INCLUYE)
+    ========================= */
+    .card-feature {
+      background: rgba(255,255,255,0.05);      
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;      
+    }
+
+    .card-feature:hover {
+      transform: translateY(-0.3rem);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .card-feature i {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    /* =========================
+       BENEFICIOS
+    ========================= */
+    .beneficio {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      /*background: rgba(84,56,132,0.1);*/
+      background: var(--color-morado);
+      padding: 1rem;
+      border-radius: 0.6rem;
+
+      transition: all 0.3s ease;
+    }
+
+    .beneficio:hover {
+      background: rgba(84,56,132,0.1);
+    }
+
+    .beneficio i {
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    }
+
+    .beneficio span {
+      font-size: clamp(1rem, 1.2vw, 1.1rem);
+    }
+
+    /* =========================
+       PROCESO (TIMELINE SIMPLE)
+    ========================= */
+    .proceso-item {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .proceso-item .numero {
+      background: #543884;
+      color: #fff;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      aspect-ratio: 1 / 1;
+      padding: 1rem;
+
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    .proceso-item p {
+      margin-top: 0.5rem;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+    .cta-dev {
+      background: linear-gradient(135deg, #151d26, #212B38);
+    }
+
+    .btn-dev {
+      background: linear-gradient(45deg, #219655, #2ecc71);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+
+      font-weight: 600;
+      letter-spacing: 0.05em;
+
+      transition: all 0.3s ease;
+    }
+
+    .btn-dev:hover {
+      transform: translateY(-0.2rem);
+      box-shadow: 0 0.5rem 1.5rem rgba(46,204,113,0.3);
+    }
+
+    /* =========================
+       IMÁGENES
+    ========================= */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* -------------------------Termina estilos para detalle servicio software */
+    
+    /*Estilos para detalle servicio ciberseguridad */
+    #detalle-ciberseguridad {
+        background: #212B38;
+        min-height: 100vh;
+        background-image: url('../img/fondoservicios.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;  
+        color: #fff;
+    }
+
+    .impacto{
+        background-color: rgba(33, 150, 85, 0.08);
+    }
+    
+    /* -------------------------Termina estilos para detalle servicio ciberseguridad */
+    
+    /*.text-purple {
+        color: #6f42c1;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+    }*/
+
+    .experience-badge {
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        background: linear-gradient(45deg, #6f42c1, #a181dc);
+        color: white;
+        padding: 20px 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(111, 66, 193, 0.4);
+        text-align: center;
+        border: 3px solid white;
+    }
+
+    .nosotros img {
+        transition: transform 0.5s ease;
+    }
+
+    .nosotros img:hover {
+        transform: translateY(-10px);
+    }
+
+    /* Ajuste para iconos de valores */
+    .nosotros i {
+        font-size: 1.2rem;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(111, 66, 193, 0.1);
+        color: #6f42c1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        font-size: 1.5rem;
+    }
+
+    #contact-form .form-control, 
+    #contact-form .form-select {
+        border: 1px solid #dee2e6;
+        padding: 12px 15px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    #contact-form .form-control:focus {
+        border-color: #a181dc;
+        box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.15);
+    }
+
+    .text-purple {
+        /*color: #6f42c1;*/
+    }
+
+    .card-transparent {
+        background: rgba(0, 0, 0, 0.4); /* Negro con 40% de opacidad */
+        backdrop-filter: blur(10px);    /* Desenfoque de fondo */
+        -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+        border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Borde sutil brillante */
+    }
+    
+    .card-transparent .lead {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* -------------------------*/
+    .detalle-consultoria-premium {
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+    }
+
+    /* Colores de Marca */
+    .text-purple { color: var(--color-morado) !important; }
+    .text-green { color: var(--color-verde) !important; }
+    .text-gris { color: var(--color-gris) !important; }
+    .bg-purple { background-color: #543884 !important; }
+    .bg-green { background-color: #219655 !important; }
+
+    /* Textos opacos */
+    .text-white-80 { color: rgba(255, 255, 255, 0.8) !important; }
+
+    /* --- Hero Detalle --- */
+    .hero-detalle {
+        min-height: 60vh;
+    }
+
+    .object-fit-cover { object-fit: cover; }
 
     
 
-@media (max-width: 576px) {
-  .servicio-card {
-    flex-direction: column;
-    text-align: center;
-  }
+    /* --- Botón Verde ProNova --- */
+    .btn-pronova-green {
+        background: linear-gradient(45deg, #219655, #2ecc71);
+        color: white !important;
+        border: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        transition: all 0.4s ease;
+        box-shadow: 0 4px 15px rgba(33, 150, 85, 0.3);
+    }
 
-  .servicio-card img {
-    width: 40%;
-  }
-  
-  .servicio-card .contenido {
-    text-align: center;
-  }
-}
+    .btn-pronova-green:hover {
+        background: linear-gradient(45deg, #2ecc71, #219655);
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 6px 20px rgba(46, 204, 113, 0.5);
+    }
+
+    /* --- Tarjetas con Hover Efecto Morado --- */
+    .card-hover-purple {
+        transition: all 0.3s ease;
+        border: 1px solid transparent !important;
+    }
+
+    .card-hover-purple:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(84, 56, 132, 0.1) !important;
+        border-color: rgba(84, 56, 132, 0.2) !important;
+    }
+
+    /* --- Timeline Horizontal --- */
+    .timeline-horizontal {
+        padding: 2rem 0;
+    }
+
+    .timeline-line {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        width: 80%;
+        height: 3px;
+        background: #e0e0e0;
+        z-index: 1;
+        transform: translateY(-50%);
+    }
+
+    .timeline-item {
+        position: relative;
+        z-index: 2;
+        background: #FFFFFF;
+    }
+
+    .timeline-numero {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border: 5px solid #FFFFFF;
+    }
+
+    /* estilos para seccion-infraestructura */    
+    .box-problema,
+    .box-solucion {
+      padding: 2rem;
+      border-radius: 1rem;
+      background: #f8f9fa;
+      transition: 0.3s;
+    }
+
+    .box-problema:hover {
+      background: #fff3f3;
+    }
+
+    .box-solucion:hover {
+      background: #eafaf1;
+    }
+
+    /* INCLUYE */
+    .item-infra {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      padding: 1.5rem;
+      border-radius: 1rem;
+      background: #f8f9fa;
+
+      transition: 0.3s;
+    }
+
+    .item-infra i {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: #219655;
+    }
+
+    .item-infra:hover {
+      transform: translateY(-4px);
+      background: #eef7f2;
+    }
+
+    /* BENEFICIOS */
+    .beneficio-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      padding: 1.2rem;
+      border-radius: 0.8rem;
+      background: #f8f9fa;
+
+      transition: 0.3s;
+    }
+
+    .beneficio-card i {
+      font-size: 1.5rem;
+      color: #543884;
+    }
+
+    .beneficio-card:hover {
+      background: #f1eef7;
+    }
+
+    /* TIMELINE */
+    .timeline-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .circle {
+      background: #543884;
+      color: white;
+      border-radius: 50%;
+      padding: 1rem;
+      display: inline-block;
+    }
+
+    .bg-green {
+      background: #219655;
+    }
+
+    /* CTA */
+    .cta-infra {
+      background: linear-gradient(135deg, #543884, #219655);
+      color: white;
+    }
+
+    .btn-infra {
+      background: white;
+      color: #543884;
+      font-weight: bold;
+      border-radius: 50px;
+    }
+
+    .btn-infra:hover {
+      background: #f1f1f1;
+    }
+    
+    /* ---------------------estilos para seccion-infraestructura */
+    
+    /* --- Responsividad General --- */
+    @media (max-width: 48em) {
+        .display-5 { font-size: 2.2rem; }
+        .display-6 { font-size: 1.8rem; }
+
+        .timeline-line { display: none; } /* Quitamos línea en móvil */
+
+        .timeline-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 1rem;
+        }
+    }
+    /*------------*/
+    /* Responsividad extra */
+    @media (max-width: 48em) {
+        .display-5 {
+            font-size: 2rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+      .servicio-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .servicio-card img {
+        width: 40%;
+      }
+
+      .servicio-card .contenido {
+        text-align: center;
+      }
+    }
+    
+    @media (max-width: 991px) {
+        .navbar-collapse .dropdown-menu {
+            border: none;
+            background-color: rgba(0, 0, 0, 0.03); /* Un fondo sutil para diferenciar el submenú */
+            margin-left: 1rem;
+            margin-right: 1rem;
+            box-shadow: none !important; /* Quitamos la sombra en móvil para que no flote */
+        }
+    }
+    
+    /* Borde responsivo para la imagen del hero */
+    @media (min-width: 992px) {
+        .rounded-start-lg {
+            border-top-left-radius: 50px !important;
+            border-bottom-left-radius: 50px !important;
+        }
+    }
+    
+    

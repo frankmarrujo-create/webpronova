@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    console.log("jQuery está listo!");
+    
 
     // Acción para el botón del Hero
     /*$('#btn-hero').on('click', function() {
@@ -15,11 +15,53 @@ $(document).ready(function() {
         $(this).css('transform', 'scale(1)');
     });
     */
-    
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
+    const menuColapsable = document.getElementById('navbarNav');
     let ignorarScroll = false; // Flag crítica
     let scrollTimeout;
+    
+    const bsCollapse = new bootstrap.Collapse(menuColapsable, {
+        toggle: false // Evitamos que se dispare solo al cargar
+    });
 
-    window.addEventListener("scroll", () => {
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            // Solo intentamos cerrar si el menú está desplegado (visible)
+            // Esto evita errores visuales en pantallas grandes (desktop)
+            if (menuColapsable.classList.contains('show')) {
+                bsCollapse.hide();
+            }
+        });
+    });
+    
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+    });
+    
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', function () {
+            const menuColapsable = document.getElementById('navbarNav');
+            const bsCollapse = bootstrap.Collapse.getInstance(menuColapsable);
+
+            if (menuColapsable.classList.contains('show')  && bsCollapse) {
+                bsCollapse.hide();
+            }
+            
+            const dropdown = this.closest('.dropdown');
+            if (!dropdown) return;
+
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const bsDropdown = bootstrap.Dropdown.getInstance(toggle);
+
+            if (bsDropdown) {
+                bsDropdown.hide();
+            }
+        });
+    });
+
+/*    window.addEventListener("scroll", () => {
         // --- Lógica de Highlighting del Navbar ---
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll(".nav-link");
@@ -48,20 +90,20 @@ $(document).ready(function() {
         scrollTimeout = setTimeout(() => {
             // Solo ocultamos si no estamos en modo ignorar
             if (!ignorarScroll) {
-                ocultarSecciones();
+                //ocultarSecciones();//------------------------------------ DESCOMENTAR ESTA LINEA
             }
         }, 100); 
     });
-
+*/
     // Evento para los links del navbar
-    document.querySelectorAll('.navbar .nav-link').forEach(link => {
+/*    document.querySelectorAll('.navbar .nav-link').forEach(link => {
         link.addEventListener('click', () => {
             ocultarSecciones();
         });
     });
-
+*/
     // Hacemos que la función sea accesible globalmente (por el onclick en el HTML)
-    window.mostrarSeccion = function(id) {
+/*    window.mostrarSeccion = function(id) {
         // 1. Limpiamos cualquier estado previo
         ocultarSecciones();
 
@@ -83,11 +125,11 @@ $(document).ready(function() {
             ignorarScroll = false;
         }, 850); 
     };
-    
+*/    
 });
 
     //mostrar las secciones ocultas
-    function mostrarSeccion(id) {
+/*    function mostrarSeccion(id) {
         ocultarSecciones();
 
         const seccion = document.getElementById(id);
@@ -106,9 +148,10 @@ $(document).ready(function() {
         }, 700);
         
     }
-    
-    function ocultarSecciones() {
+*/    
+/*    function ocultarSecciones() {
         document.querySelectorAll('.detalle-servicio').forEach(sec => {
           sec.classList.add('d-none');
         });
       }
+*/
