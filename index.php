@@ -18,8 +18,8 @@
     <section id="inicio">
         <div class="hero-wrapper d-flex flex-column">
             <!-- Navbar -->
-            <ul class="navbar-nav ms-auto align-items-center">
-                <nav class="navbar navbar-expand-lg">
+<!--            <ul class="navbar-nav ms-auto align-items-center">-->
+                <nav class="navbar navbar-expand-lg fixed-top">
                     <div class="container">
                         <div class="col-2">
                             <a class="navbar-brand" href="#inicio"><img src="./img/Logotipo.png" class="logo"></a>
@@ -77,28 +77,28 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="./img/consultoria.png" class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
+                                <div class="carousel-caption ">
                                     <h1>Consultoría estratégica</h1>
                                     <p>Transformamos tu estrategia TI en resultados reales para tu negocio</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="./img/software.png" class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
+                                <div class="carousel-caption ">
                                     <h1>Desarrollo y automatizacíon</h1>
                                     <p>Automatiza procesos y mejora tu productividad con soluciones personalizadas</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="./img/soporte.png" class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
+                                <div class="carousel-caption ">
                                     <h1>Infraestructura y soporte</h1>
                                     <p>Mantenemos tu operación funcionando sin interrupciones</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="./img/seguridad.png" class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
+                                <div class="carousel-caption ">
                                     <h1>Ciberseguridad</h1>
                                     <p>Defiende tu empresa contra amenazas digitales con soluciones avanzadas</p>
                                 </div>
@@ -350,10 +350,10 @@
             <!-- HERO -->
             <div class="hero-dev py-5">
               <div class="container-fluid p-0">
-                <div class="row align-items-center g-4 pt-5 ps-lg-5 ps-xl-5">
+                <div class="row align-items-center g-4 pt-5 ps-lg-5 ps-xl-5 ">
 
-                  <!-- TEXTO -->
-                  <div class="col-md-6 text-white">
+<!--                   TEXTO <div class="col-lg-7 p-5 ps-lg-5 ps-xl-5">-->
+                  <div class="col-md-6 p-5 ps-lg-5 ps-xl-5 text-white">
                     <h6 class="text-green fw-bold text-uppercase mb-3" style="letter-spacing: 2px;">Servicios</h6>
                     <h1 class="fw-bold display-5 mb-3">Desarrollo y automatización</h1>
                     <p class="lead">
