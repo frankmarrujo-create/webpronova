@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProNova core</title>
+    <meta name="description" content="Soluciones tecnológicas, desarrollo de software, infraestructura y ciberseguridad para empresas.">
+    <meta property="og:title" content="ProNova Core">
+    <meta property="og:description" content="Soluciones tecnológicas empresariales">
+    <meta property="og:image" content="https://pronovacore.com/img/Logotipo.png">
+    <meta property="og:type" content="website">
+    <title>ProNova Core | Desarrollo de Software, Infraestructura y Ciberseguridad</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -11,9 +16,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./img/pronova_favicon.ico" type="image/png">
 </head>
 <body>
+    <main>
+    <a href="https://wa.me/5213313285484?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios"
+        class="whatsapp-float-text"
+        target="_blank">
 
+        <i class="bi bi-whatsapp fs-1"></i>
+        <span>Contáctanos</span>
+
+     </a>
     <!--Seccion inicio-->
     <section id="inicio">
         <div class="hero-wrapper d-flex flex-column">
@@ -22,7 +36,7 @@
                 <nav class="navbar navbar-expand-lg fixed-top">
                     <div class="container">
                         <div class="col-2">
-                            <a class="navbar-brand" href="#inicio"><img src="./img/Logotipo.png" class="logo"></a>
+                            <a class="navbar-brand" href="#inicio"><img src="./img/Logotipo.png" loading="eager" class="logo"></a>
                         </div>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                             <span class="navbar-toggler-icon"></span>
@@ -76,28 +90,28 @@
                     <div id="carrusel" class="carousel slide h-100" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="./img/consultoria.png" class="d-block w-100" alt="...">
+                                <img src="./img/consultoria.webp" loading="eager" class="d-block w-100" alt="...">
                                 <div class="carousel-caption ">
                                     <h1>Consultoría estratégica</h1>
                                     <p>Transformamos tu estrategia TI en resultados reales para tu negocio</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="./img/software.png" class="d-block w-100" alt="...">
+                                <img src="./img/software.webp" loading="eager" class="d-block w-100" alt="...">
                                 <div class="carousel-caption ">
                                     <h1>Desarrollo y automatizacíon</h1>
                                     <p>Automatiza procesos y mejora tu productividad con soluciones personalizadas</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="./img/soporte.png" class="d-block w-100" alt="...">
+                                <img src="./img/soporte.webp" loading="eager" class="d-block w-100" alt="...">
                                 <div class="carousel-caption ">
                                     <h1>Infraestructura y soporte</h1>
                                     <p>Mantenemos tu operación funcionando sin interrupciones</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="./img/seguridad.png" class="d-block w-100" alt="...">
+                                <img src="./img/seguridad.webp" loading="eager" class="d-block w-100" alt="...">
                                 <div class="carousel-caption ">
                                     <h1>Ciberseguridad</h1>
                                     <p>Defiende tu empresa contra amenazas digitales con soluciones avanzadas</p>
@@ -206,7 +220,7 @@
                         </a>
                     </div>
                     <div class="col-lg-5 p-0">
-                        <img src="./img/consultoria.png" class="img-fluid h-100 object-fit-cover rounded-start-lg" alt="Estrategia TI ProNova">
+                        <img src="./img/consultoria.webp" loading="lazy" class="img-fluid h-100 object-fit-cover rounded-start-lg" alt="Estrategia TI ProNova">
                     </div>
                 </div>
 
@@ -367,7 +381,7 @@
                   <!-- IMAGEN -->
                   <div class="col-md-6">
                       <!--<img src="./img/consultoria.png" class="img-fluid h-100 object-fit-cover rounded-start-lg" alt="Estrategia TI ProNova">-->
-                    <img src="./img/software.png" class="img-fluid object-fit-cover rounded-start-lg" alt="">
+                    <img src="./img/software.webp" loading="lazy" class="img-fluid object-fit-cover rounded-start-lg" alt="">
                   </div>
 
                 </div>
@@ -488,7 +502,7 @@
             <div class="container-fluid p-0 mb-5">
                 <div class="row align-items-center g-4 pt-4 ps-lg-5 ps-xl-5 mt-lg-5">
                     <div class="col-lg-6 text-center">
-                        <img src="./img/soporte.png" class="img-fluid rounded-4 shadow-sm" alt="">
+                        <img src="./img/soporte.webp" loading="lazy" class="img-fluid rounded-4 shadow-sm" alt="">
                     </div>
                     <div class="col-lg-6 p-5 ps-lg-5 ps-xl-5">
                         <h6 class="text-purple fw-bold text-uppercase mb-3" style="letter-spacing: 2px;">Servicios</h6>
@@ -678,7 +692,7 @@
                         </a>
                     </div>
                     <div class="col-lg-5 p-0">
-                        <img src="./img/seguridad.png" class="img-fluid h-100 object-fit-cover rounded-start-lg" alt="Estrategia TI ProNova">
+                        <img src="./img/seguridad.webp" loading="lazy" class="img-fluid h-100 object-fit-cover rounded-start-lg" alt="Estrategia TI ProNova">
                     </div>
                 </div>
 
@@ -833,7 +847,7 @@
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6">
                         <div class="position-relative">
-                            <img src="./img/nosotros.png" class="img-fluid rounded-4 shadow-lg" alt="Equipo ProNova core">
+                            <img src="./img/nosotros.webp" loading="lazy" class="img-fluid rounded-4 shadow-lg" alt="Equipo ProNova core">
                             <!--<div class="experience-badge">
                                 <span class="fs-2 fw-bold">100%</span>
                                 <p class="mb-0">Compromiso Digital</p>
@@ -886,8 +900,8 @@
         </section>
         
         <section id="contacto" class="pt-5 contacto">
-            <div class="container">
-                <!--<div class="row g-0 align-items-center pt-5 ps-lg-5 ps-xl-5 mb-5 hero-detalle">-->
+            <?php //require_once('controladores/controlador_contacto.php'); ?>
+            <div class="container">                
                 <div class="row g-5 pt-5 ps-lg-5 ps-xl-5 mt-lg-2">
                     <div class="col-lg-5">
                         <h6 class="text-purple fw-bold text-uppercase">Contacto</h6>
@@ -928,27 +942,27 @@
 
                     <div class="col-lg-7">
                         <div class="card border-0 shadow-sm p-4 rounded-4 bg-light">
-                            <form id="contact-form">
+                            <form id="contact-form" method="POST" ><!-- action="controladores/controlador_contacto.php" -->
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label class="form-label fw-bold small">Nombre</label>
-                                        <input type="text" class="form-control" placeholder="Tu nombre" required>
+                                        <label class="form-label fw-bold small">Nombre<span class="text-danger">*</span></label>
+                                        <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label fw-bold small">Empresa</label>
-                                        <input type="text" class="form-control" placeholder="Tu empresa" required>
+                                        <input type="text" name="empresa" class="form-control" placeholder="Tu empresa">
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label fw-bold small">Teléfono</label>
-                                        <input type="number" class="form-control" placeholder="Teléfono de contacto" required>
+                                        <label class="form-label fw-bold small">Teléfono<span class="text-danger">*</span></label>
+                                        <input type="number" name="telefono" class="form-control" placeholder="Teléfono de contacto" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label fw-bold small">Correo</label>
-                                        <input type="email" class="form-control" placeholder="tu@email.com" required>
+                                        <label class="form-label fw-bold small">Correo<span class="text-danger">*</span></label>
+                                        <input type="email" name="correo" class="form-control" placeholder="tu@email.com" required>
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label fw-bold small">Asunto</label>
-                                        <select class="form-select">
+                                        <select name="asunto" class="form-select">
                                             <option selected>Consultoría Estratégica</option>
                                             <option>Desarrollo y Automatización</option>
                                             <option>Infraestructura y soporte</option>
@@ -958,7 +972,7 @@
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label fw-bold small">Mensaje</label>
-                                        <textarea class="form-control" rows="4" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                                        <textarea name="mensaje" class="form-control" rows="4" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
                                     </div>
                                     <div class="col-12 mt-4">
                                         <button type="submit" class="btn btn-pronova-purple w-100 py-3">
@@ -992,6 +1006,30 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Custom JS -->
         <script src="js/script.js"></script>
-   
+        
+        <!-- Modal Confirmación -->
+        <div class="modal fade" id="modalConfirmacion" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content confirmacion-modal text-center p-4">
+
+              <div class="check-icon mb-3">
+                <i class="bi bi-shield-check"></i>
+              </div>
+
+              <h4 class="fw-bold mb-3">¡Mensaje enviado correctamente!</h4>
+
+              <p class="text-muted">
+                Tu información ha sido recibida de forma segura.  
+                Uno de nuestros expertos se pondrá en contacto contigo para brindarte atención especializada.
+              </p>
+
+              <button class="btn btn-pronova mt-3" data-bs-dismiss="modal">
+                Entendido
+              </button>
+
+            </div>
+          </div>
+        </div>
+    </main>
 </body>
 </html>
